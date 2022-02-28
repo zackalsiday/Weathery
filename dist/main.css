@@ -1,3 +1,57 @@
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main-logo.css ***!
+  \********************************************************************************************************/
+.main-logo{
+    color:white;
+    font-size: 3rem;
+    padding-left: 3rem;
+    
+}
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/info-box.css ***!
+  \*******************************************************************************************************/
+.weather-info-box{
+    border-style: solid;
+    width: fit-content;
+    padding: 1rem;
+    position: relative;
+    left: 4.5%;
+    top: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.274);
+    border-radius: 0.5rem;
+}
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/weeks-weather.css ***!
+  \************************************************************************************************************/
+.weeks-weather{
+    display: flex;
+    position: relative;
+    top: 7rem;
+    border-style: solid;
+    padding: 1rem;
+    width: 21.9rem;
+    
+  
+    overflow-x: scroll;
+    border-radius: 1rem;
+    color: white;
+    
+}
+.weeks-weather::-webkit-scrollbar {
+  display: none;
+}
+.space{
+    color: rgba(255, 255, 255, 0);
+}
+
+.days{
+    display: block;
+    border-style: solid;
+    min-width: 8rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

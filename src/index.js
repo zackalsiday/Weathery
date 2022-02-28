@@ -1,4 +1,2 @@
-document.addEventListener("DOMContentLoaded", () => {
-   let a =  document.getElementById("test") 
-   a.innerHTML = "zack"
-})
+ const infoBox = require("./scripts/info-box")
+ const weeksWeather = require("./scripts/weeks-weather")
