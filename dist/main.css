@@ -3,11 +3,11 @@
   \********************************************************************************************************/
 .main-title{
     color:#232c46e8;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     position: absolute; 
     top: 4.5rem;
-    left: 6.8rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    left: 6rem;
+    font-family:monospace
 }
 .main-logo{
 
