@@ -1,11 +1,19 @@
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main-logo.css ***!
   \********************************************************************************************************/
+.main-title{
+    color:#232c46e8;
+    font-size: 2.5rem;
+    position: absolute; 
+    top: 4.5rem;
+    left: 6.8rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
 .main-logo{
-    color:rgb(218, 24, 24);
-    font-size: 3rem;
-    padding-left: 3rem;
-    
+
+    height: 9rem;
+    margin-left: 3rem;
+
 }
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/info-box.css ***!
@@ -52,6 +60,15 @@
     padding: 1rem;
     border-radius: 0.2rem;
     }
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/location.css ***!
+  \*******************************************************************************************************/
+#location {
+   position: absolute;
+   right: 3rem;
+   /* top: 1rem; */
+   font-size: 1.5rem;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

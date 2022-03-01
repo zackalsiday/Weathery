@@ -1,3 +1,3 @@
  const infoBox = require("./scripts/info-box")
- const weeksWeather = require("./scripts/weeks-weather")
+ const weeks_weather = require("./scripts/weeks_weather")
 const location = require("./scripts/location")

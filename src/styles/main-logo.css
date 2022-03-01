@@ -1,6 +1,14 @@
+.main-title{
+    color:#232c46e8;
+    font-size: 2.5rem;
+    position: absolute; 
+    top: 4.5rem;
+    left: 6.8rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
 .main-logo{
-    color:rgb(218, 24, 24);
-    font-size: 3rem;
-    padding-left: 3rem;
-    
+
+    height: 9rem;
+    margin-left: 3rem;
+
 }
