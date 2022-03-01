@@ -1,7 +1,7 @@
 .weeks-weather{
     display: flex;
     position: relative;
-    top: 7rem;
+    top: 4.3rem;
     border-style: solid;
     padding: 1rem;
     width: 21.9rem;
@@ -14,6 +14,7 @@
 }
 .weeks-weather::-webkit-scrollbar {
   display: none;
+
 }
 .space{
     color: rgba(255, 255, 255, 0);
