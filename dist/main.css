@@ -24,7 +24,8 @@
     top: 4.3rem;
     border-style: solid;
     padding: 1rem;
-    width: 21.9rem;
+    width: 26rem;
+
     
   
     overflow-x: scroll;
@@ -46,6 +47,7 @@
     min-width: 8rem;
     padding: 1rem;
     border-radius: 0.2rem;
+    border-width: thin;
     }
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/location.css ***!
@@ -66,6 +68,7 @@
     left: 4.5rem;
     top: 1rem;
     gap: 0.5rem;
+    width: fit-content;
 }
 
 #search-but{
@@ -83,6 +86,9 @@
     background-color: rgba(255, 255, 255, 0.657);
 }
 
+.icons{
+    height: 3rem;
+}
 
 
 #search-bar{

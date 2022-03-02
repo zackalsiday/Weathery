@@ -54,6 +54,14 @@
 //         document.getElementById("day-five-day").innerHTML = weekday[(day + 4) % weekday.length]
 //         document.getElementById("day-six-day").innerHTML = weekday[(day + 5) % weekday.length]
 //         document.getElementById("day-seven-day").innerHTML = weekday[(day + 6) % weekday.length]
+//         document.getElementById("day-one-icon").src = `../images/2nd Set - Color/${days[0].icon}.svg`
+//         document.getElementById("day-two-icon").src = `../images/2nd Set - Color/${days[1].icon}.svg`
+//         document.getElementById("day-three-icon").src = `../images/2nd Set - Color/${days[2].icon}.svg`
+//         document.getElementById("day-four-icon").src = `../images/2nd Set - Color/${days[3].icon}.svg`
+//         document.getElementById("day-five-icon").src = `../images/2nd Set - Color/${days[4].icon}.svg`
+//         document.getElementById("day-six-icon").src = `../images/2nd Set - Color/${days[5].icon}.svg`
+//         document.getElementById("day-seven-icon").src = `../images/2nd Set - Color/${days[6].icon}.svg`
+
 
 //  }, 
 //         search: function () {
@@ -75,30 +83,28 @@
 //     }
 // })
 
+
+       
 // function defaultCity(){
 //     if (document.getElementById("search-bar").value == ""){
-//           if ('geolocation' in navigator) {
-
-//         navigator.geolocation.getCurrentPosition(function (position) {
-//             let lat = position.coords.latitude
-//             let lon = position.coords.longitude
-
+//         if ('geolocation' in navigator) {
+//             navigator.geolocation.getCurrentPosition(function (position) {
+//                 let lat = position.coords.latitude
+//                 let lon = position.coords.longitude 
 //                 let locationInfo;
-//                 let city;
+               
 //                 fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
 //                     .then(response => response.json())
-//                     .then(data => locationInfo = data)
-//                     .then(() => city = locationInfo.city)
-//                     .then(() => document.getElementById("location").innerHTML = `${city},${locationInfo.principalSubdivision}`)
-//                     .then(() => {
-   
-
-//     } else {
-//         console.log('geolocation is disabled')
+//                     .then(data =>  weather.fetchWeather(data.city))
+                   
+//             })
+//         }else{
+//             console.log('geolocation is disabled')
+//         }
 //     }
-
+// }
                
     
+// defaultCity()
 
-// }
 

@@ -4,7 +4,8 @@
     top: 4.3rem;
     border-style: solid;
     padding: 1rem;
-    width: 21.9rem;
+    width: 26rem;
+
     
   
     overflow-x: scroll;
@@ -26,4 +27,5 @@
     min-width: 8rem;
     padding: 1rem;
     border-radius: 0.2rem;
+    border-width: thin;
     }
