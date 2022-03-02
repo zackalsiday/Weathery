@@ -1,4 +1,5 @@
 
+
 //  let weather = {
 //     fetchWeather: function(city) {
 //         fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' + city + '?unitGroup=us&key=PRGYVCZ9WYDCWQ5DW54PUH6HX&contentType=json')
@@ -7,12 +8,17 @@
 
 //     },
 //     displayWeather: function(data) {
-//         const { address, days } = data;
+//         const { address, days, latitude, longitude} = data;
 //         const {icon, temp, windspeed, humidity} = data.currentConditions;
 //             const weekday = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
 //             const d = new Date();
 //             let day = d.getDay()
-//         // console.log(address, days, icon, temp, humidity, windspeed)
+//             let dataTwo;
+//                 fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${latitude}&longitude=${longitude}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
+//                     .then(response => response.json())
+//                     .then(data => dataTwo = data)
+//                     .then(() => document.getElementById("location").innerHTML = `${dataTwo.city},${dataTwo.principalSubdivision}`)
+//         // console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
 //         document.getElementById('day-one-far').innerHTML = ` ${days[0].temp}&degF`
 //         document.getElementById('day-one-cel').innerHTML = ` ${Math.round((days[0].temp - 32) * 5 / 9)}&degC `
 //         document.getElementById('day-one-windspeed').innerHTML = `Wind: ${days[0].windspeed} mph `
@@ -52,14 +58,47 @@
 //  }, 
 //         search: function () {
 //             this.fetchWeather(document.getElementById("search-bar").value)
-//         }
+//         },
+
+
 
 // }
 
-// document.getElementById("search-but").addEventListener("click",  function() {
 
+// document.getElementById("search-but").addEventListener("click",function() {
+//     weather.search()
+// })
+
+// document.getElementById("search-bar").addEventListener("keyup", function(event){
+//     if (event.key == "Enter"){
+//         weather.search()
+//     }
+// })
+
+// function defaultCity(){
+//     if (document.getElementById("search-bar").value == ""){
+//           if ('geolocation' in navigator) {
+
+//         navigator.geolocation.getCurrentPosition(function (position) {
+//             let lat = position.coords.latitude
+//             let lon = position.coords.longitude
+
+//                 let locationInfo;
+//                 let city;
+//                 fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
+//                     .then(response => response.json())
+//                     .then(data => locationInfo = data)
+//                     .then(() => city = locationInfo.city)
+//                     .then(() => document.getElementById("location").innerHTML = `${city},${locationInfo.principalSubdivision}`)
+//                     .then(() => {
+   
+
+//     } else {
+//         console.log('geolocation is disabled')
+//     }
+
+               
     
-// });
 
-// function
+// }
 
