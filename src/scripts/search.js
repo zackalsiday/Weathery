@@ -59,7 +59,7 @@
         document.getElementById("day-five-day").innerHTML = weekday[(day + 4) % weekday.length]
         document.getElementById("day-six-day").innerHTML = weekday[(day + 5) % weekday.length]
         document.getElementById("day-seven-day").innerHTML = weekday[(day + 6) % weekday.length]
-        document.getElementById("day-one-icon").src = `https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/2nd%20Set%20-%20Monochrome/${days[0].icon}.png`
+        document.getElementById("day-one-icon").src = `images/weather_icons/${days[0].icon}.svg`
         document.getElementById("day-two-icon").src = `../images/weather_icons/${days[1].icon}.svg`
         document.getElementById("day-three-icon").src = `../images/weather_icons/${days[2].icon}.svg`
         document.getElementById("day-four-icon").src = `../images/weather_icons/${days[3].icon}.svg`
