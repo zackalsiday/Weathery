@@ -27,7 +27,7 @@
 .weeks-weather{
     display: flex;
     position: relative;
-    top: 2.4rem;
+
     border-style: solid;
     padding: 1rem;
     width: 26rem;
@@ -72,7 +72,7 @@
     display: flex;
     position: relative;
     left: 6.9rem;
-    top: 1rem;
+    bottom: 1.5rem;
     gap: 0.5rem;
     width: fit-content;
 }
@@ -114,7 +114,7 @@
     width: 28.4rem;
     height: 18.8rem;
     position: relative;
-    top: 3.7rem;
+    top: 1.3rem;
     border-radius: 1rem;
 }
 /*!***********************************************************************************************************!*\
@@ -125,18 +125,39 @@ color: black;
 
 }
 
-.creators-info{
+/* .creators-info{ */
   
-    display: flex ;
+    /* display: flex ;
     justify-content: right;
-    padding-right: 2.1rem;
+    padding: 2.1rem; */
+/*  
+    display: inline;
     position: relative;
+    left : 78rem;
     top: 2rem;
-    gap: 3.2rem;
+  
+
     z-index: 1
+} */
+
+/* #github{
+   position: relative;
+   right: 5.5rem;
 }
 
+#linkedin{
+    position: relative;
+    right: 2rem;
+} */
 
+.creators-info{
+    display: flex;
+    gap:1rem;
+    position: relative;
+    bottom: 9rem;
+    left: 90%;
+    width: fit-content;
+}
 
 
 /*!*************************************************************************************************************************************!*\

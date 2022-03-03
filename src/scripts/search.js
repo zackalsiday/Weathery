@@ -23,7 +23,7 @@
                     .then(data => dataTwo = data)
                     .then(() => document.getElementById("location").innerHTML = `${dataTwo.city}, ${dataTwo.principalSubdivision}`)
 
-        console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
+        // console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
         document.getElementById('day-one-far').innerHTML = ` ${days[0].temp}&degF`
         document.getElementById('day-one-cel').innerHTML = ` ${Math.round((days[0].temp - 32) * 5 / 9)}&degC `
         document.getElementById('day-one-windspeed').innerHTML = `Wind: ${days[0].windspeed}  km/h `

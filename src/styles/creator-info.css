@@ -3,16 +3,37 @@ color: black;
 
 }
 
-.creators-info{
+/* .creators-info{ */
   
-    display: flex ;
+    /* display: flex ;
     justify-content: right;
-    padding-right: 2.1rem;
+    padding: 2.1rem; */
+/*  
+    display: inline;
     position: relative;
+    left : 78rem;
     top: 2rem;
-    gap: 3.2rem;
+  
+
     z-index: 1
+} */
+
+/* #github{
+   position: relative;
+   right: 5.5rem;
 }
 
+#linkedin{
+    position: relative;
+    right: 2rem;
+} */
 
+.creators-info{
+    display: flex;
+    gap:1rem;
+    position: relative;
+    bottom: 9rem;
+    left: 90%;
+    width: fit-content;
+}
 
