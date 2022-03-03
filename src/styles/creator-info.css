@@ -1,0 +1,18 @@
+.creators-icon{
+color: black;
+
+}
+
+.creators-info{
+  
+    display: flex ;
+    justify-content: right;
+    padding-right: 2.1rem;
+    position: relative;
+    top: 2rem;
+    gap: 3.2rem;
+    z-index: 1
+}
+
+
+

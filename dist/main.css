@@ -1,3 +1,6 @@
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main-logo.css ***!
+  \********************************************************************************************************/
 .main-title{
     color:#232c46e8;
     font-size: 2.3rem;
@@ -18,6 +21,9 @@
     box-sizing: border-box;
     margin-left: 2.5rem
 }
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/weeks-weather.css ***!
+  \************************************************************************************************************/
 .weeks-weather{
     display: flex;
     position: relative;
@@ -49,6 +55,9 @@
     border-radius: 0.2rem;
     border-width: thin;
     }
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/location.css ***!
+  \*******************************************************************************************************/
 #location {
    position: absolute;
    right: 3rem;
@@ -56,6 +65,9 @@
    font-size: 1.5rem;
    color: whitesmoke;
 }
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/search-bar.css ***!
+  \*********************************************************************************************************/
 .search{
     display: flex;
     position: relative;
@@ -95,6 +107,9 @@
     padding-left: 1rem;
 
 }
+/*!**************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/map.css ***!
+  \**************************************************************************************************/
 #map{
     width: 28.4rem;
     height: 18.8rem;
@@ -102,6 +117,29 @@
     top: 3.7rem;
     border-radius: 1rem;
 }
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/creator-info.css ***!
+  \***********************************************************************************************************/
+.creators-icon{
+color: black;
+
+}
+
+.creators-info{
+  
+    display: flex ;
+    justify-content: right;
+    padding-right: 2.1rem;
+    position: relative;
+    top: 2rem;
+    gap: 3.2rem;
+    z-index: 1
+}
 
 
-/*# sourceMappingURL=main.css.map*/
+
+
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+
