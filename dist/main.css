@@ -1,25 +1,36 @@
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main-logo.css ***!
   \********************************************************************************************************/
-.main-title{
+/* .main-title{
     color:#232c46e8;
     font-size: 2.3rem;
     position: relative; 
    right: 10rem;
    bottom: 3rem;
     font-family:monospace
-}
+} */
 .main-logo{
 
-    height: 9rem;
+    height: 15rem;
+    
     position: relative;
     left: 3rem;
+   
 }
 
 .main{
     align-items: center;
     box-sizing: border-box;
     margin-left: 2.5rem
+
+}
+
+body{
+ background-repeat: no-repeat; 
+    
+    background-attachment: fixed;
+     background-size: cover; 
+     padding-left:2rem
 }
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/weeks-weather.css ***!
@@ -27,7 +38,7 @@
 .weeks-weather{
     display: flex;
     position: relative;
-
+    top: 0.001rem;
     border-style: solid;
     padding: 1rem;
     width: 26rem;
@@ -52,8 +63,9 @@
     border-style: solid;
     min-width: 8rem;
     padding: 1rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     border-width: thin;
+    background-color: rgba(0, 0, 0, 0.596);
     }
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/location.css ***!
@@ -63,7 +75,12 @@
    right: 3rem;
    top: 9.7rem;
    font-size: 1.5rem;
-   color: whitesmoke;
+   color: white;
+   background-color: rgba(0, 0, 0, 0.603);
+   border-style: solid;
+   border-width: thin;
+   padding: 1rem;
+   border-radius: 1rem;
 }
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/search-bar.css ***!
@@ -121,7 +138,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/creator-info.css ***!
   \***********************************************************************************************************/
 .creators-icon{
-color: black;
+color: white;
 
 }
 
@@ -154,9 +171,14 @@ color: black;
     display: flex;
     gap:1rem;
     position: relative;
-    bottom: 9rem;
-    left: 90%;
+    bottom: 11rem;
+    left: 83%;
     width: fit-content;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.37);
 }
 
 

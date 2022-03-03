@@ -1,5 +1,5 @@
 .creators-icon{
-color: black;
+color: white;
 
 }
 
@@ -32,8 +32,13 @@ color: black;
     display: flex;
     gap:1rem;
     position: relative;
-    bottom: 9rem;
-    left: 90%;
+    bottom: 11rem;
+    left: 83%;
     width: fit-content;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.37);
 }
 

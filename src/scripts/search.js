@@ -66,7 +66,7 @@
         document.getElementById("day-five-icon").src = 'images/weather_icons/' + days[4].icon + '.svg'
         document.getElementById("day-six-icon").src = 'images/weather_icons/' + days[5].icon + '.svg'
         document.getElementById("day-seven-icon").src = 'images/weather_icons/' + days[6].icon + '.svg'
-
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + address + " ')"
 
  }, 
         search: function () {
