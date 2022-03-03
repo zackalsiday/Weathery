@@ -23,7 +23,7 @@
                     .then(data => dataTwo = data)
                     .then(() => document.getElementById("location").innerHTML = `${dataTwo.city}, ${dataTwo.principalSubdivision}`)
 
-        // console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
+        console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
         document.getElementById('day-one-far').innerHTML = ` ${days[0].temp}&degF`
         document.getElementById('day-one-cel').innerHTML = ` ${Math.round((days[0].temp - 32) * 5 / 9)}&degC `
         document.getElementById('day-one-windspeed').innerHTML = `Wind: ${days[0].windspeed} mph `
@@ -59,7 +59,7 @@
         document.getElementById("day-five-day").innerHTML = weekday[(day + 4) % weekday.length]
         document.getElementById("day-six-day").innerHTML = weekday[(day + 5) % weekday.length]
         document.getElementById("day-seven-day").innerHTML = weekday[(day + 6) % weekday.length]
-        document.getElementById("day-one-icon").src = `images/weather_icons/${days[0].icon}.svg`
+        document.getElementById("day-one-icon").src = 'images/weather_icons/' + days[0].icon + '.svg'
         document.getElementById("day-two-icon").src = `../images/weather_icons/${days[1].icon}.svg`
         document.getElementById("day-three-icon").src = `../images/weather_icons/${days[2].icon}.svg`
         document.getElementById("day-four-icon").src = `../images/weather_icons/${days[3].icon}.svg`
