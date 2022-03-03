@@ -59,13 +59,13 @@
         document.getElementById("day-five-day").innerHTML = weekday[(day + 4) % weekday.length]
         document.getElementById("day-six-day").innerHTML = weekday[(day + 5) % weekday.length]
         document.getElementById("day-seven-day").innerHTML = weekday[(day + 6) % weekday.length]
-        document.getElementById("day-one-icon").src = '../images/weather_icons/' + days[0].icon + '.svg'
-        document.getElementById("day-two-icon").src = '../images/weather_icons/' + days[1].icon + '.svg'
-        document.getElementById("day-three-icon").src = '../images/weather_icons/' + days[2].icon + '.svg'
-        document.getElementById("day-four-icon").src = '../images/weather_icons/' + days[3].icon + '.svg'
-        document.getElementById("day-five-icon").src = '../images/weather_icons/' + days[4].icon + '.svg'
-        document.getElementById("day-six-icon").src = '../images/weather_icons/' + days[5].icon + '.svg'
-        document.getElementById("day-seven-icon").src = '../images/weather_icons/' + days[6].icon + '.svg'
+        document.getElementById("day-one-icon").src = 'images/weather_icons/' + days[0].icon + '.svg'
+        document.getElementById("day-two-icon").src = 'images/weather_icons/' + days[1].icon + '.svg'
+        document.getElementById("day-three-icon").src = 'images/weather_icons/' + days[2].icon + '.svg'
+        document.getElementById("day-four-icon").src = 'images/weather_icons/' + days[3].icon + '.svg'
+        document.getElementById("day-five-icon").src = 'images/weather_icons/' + days[4].icon + '.svg'
+        document.getElementById("day-six-icon").src = 'images/weather_icons/' + days[5].icon + '.svg'
+        document.getElementById("day-seven-icon").src = 'images/weather_icons/' + days[6].icon + '.svg'
 
 
  }, 
