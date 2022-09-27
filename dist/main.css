@@ -1,6 +1,3 @@
-/*!********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main-logo.css ***!
-  \********************************************************************************************************/
 /* .main-title{
     color:#232c46e8;
     font-size: 2.3rem;
@@ -21,8 +18,7 @@
 .main{
     align-items: center;
     box-sizing: border-box;
-    margin-left: 2.5rem
-
+    margin-left: 2.5rem;
 }
 
 body{
@@ -30,11 +26,9 @@ body{
     
     background-attachment: fixed;
      background-size: cover; 
-     padding-left:2rem
+     padding-left:2rem;
+    
 }
-/*!************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/weeks-weather.css ***!
-  \************************************************************************************************************/
 .weeks-weather{
     display: flex;
     position: relative;
@@ -67,11 +61,8 @@ body{
     border-width: thin;
     background-color: rgba(0, 0, 0, 0.596);
     }
-/*!*******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/location.css ***!
-  \*******************************************************************************************************/
 #location {
-   position: absolute;
+   position: fixed;
    right: 3rem;
    top: 9.7rem;
    font-size: 1.5rem;
@@ -82,9 +73,6 @@ body{
    padding: 1rem;
    border-radius: 1rem;
 }
-/*!*********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/search-bar.css ***!
-  \*********************************************************************************************************/
 .search{
     display: flex;
     position: relative;
@@ -124,9 +112,6 @@ body{
     padding-left: 1rem;
 
 }
-/*!**************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/map.css ***!
-  \**************************************************************************************************/
 #map{
     width: 28.4rem;
     height: 18.8rem;
@@ -134,9 +119,6 @@ body{
     top: 1.3rem;
     border-radius: 1rem;
 }
-/*!***********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/creator-info.css ***!
-  \***********************************************************************************************************/
 .creators-icon{
 color: white;
 
@@ -170,9 +152,10 @@ color: white;
 .creators-info{
     display: flex;
     gap:1rem;
-    position: relative;
-    bottom: 11rem;
-    left: 83%;
+    position: fixed;
+    top: 4rem;
+    /* left: 83%; */
+    right: 5rem;
     width: fit-content;
     border-style: solid;
     border-width: thin;
@@ -182,7 +165,4 @@ color: white;
 }
 
 
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
 
