@@ -75,9 +75,9 @@ body{
 }
 .search{
     display: flex;
-    position: relative;
-    left: 6.9rem;
-    bottom: 1.5rem;
+    position: fixed;
+    left: 8rem;
+    top: 13rem;
     gap: 0.5rem;
     width: fit-content;
 }
