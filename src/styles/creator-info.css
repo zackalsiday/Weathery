@@ -31,9 +31,9 @@ color: white;
 .creators-info{
     display: flex;
     gap:1rem;
-    position: relative;
-    bottom: 11rem;
-    left: 83%;
+    position: fixed;
+    top: 5rem;
+    right: 3rem;
     width: fit-content;
     border-style: solid;
     border-width: thin;

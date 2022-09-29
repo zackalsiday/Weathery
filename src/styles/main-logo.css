@@ -18,13 +18,13 @@
 .main{
     align-items: center;
     box-sizing: border-box;
-    margin-left: 2.5rem
+    margin-left: 2.5rem;
 
 }
 
 body{
  background-repeat: no-repeat; 
-    
+    position: fixed;
     background-attachment: fixed;
      background-size: cover; 
      padding-left:2rem

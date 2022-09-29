@@ -11,7 +11,6 @@
 
     },
     displayWeather: function(data) {
-       
         let { address, days, latitude, longitude} = data;
         const {icon, temp, windspeed, humidity} = data.currentConditions;
             const weekday = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
@@ -21,8 +20,8 @@
                 fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${latitude}&longitude=${longitude}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
                     .then(response => response.json())
                     .then(data => dataTwo = data)
-                    .then(() => document.getElementById("location").innerHTML = `${dataTwo.city}, ${dataTwo.principalSubdivision}`)
-
+                    .then(() => document.getElementById("location").innerHTML = `${dataTwo.locality}, ${dataTwo.principalSubdivision}`)
+                    
         // console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
         document.getElementById('day-one-far').innerHTML = ` ${days[0].temp}&degF`
         document.getElementById('day-one-cel').innerHTML = ` ${Math.round((days[0].temp - 32) * 5 / 9)}&degC `
@@ -67,22 +66,42 @@
         document.getElementById("day-six-icon").src = 'images/weather_icons/' + days[5].icon + '.svg'
         document.getElementById("day-seven-icon").src = 'images/weather_icons/' + days[6].icon + '.svg'
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + address + " ')"
-
  }, 
         search: function () {
             this.fetchWeather(document.getElementById("search-bar").value)
+           
         },
+        defaultCity: function(){
+            if (document.getElementById("search-bar").value == "") {
+                if ('geolocation' in navigator) {
+                    
+                  navigator.geolocation.getCurrentPosition( (position) => {
+                        let lat = position.coords.latitude
+                        let lon = position.coords.longitude
+                        // let locationInfo;
+                        fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
+                            .then(response => response.json())
+                            .then(data => weather.fetchWeather(data.locality))
 
+                    })
+
+                } else {
+                    console.log('geolocation is disabled')
+                }
+            }
+        },
 
       initMap: function(data){
             const {latitude, longitude} = data
             var map 
+            var marker
             var location = {lat: latitude, lng: longitude};
+            // console.log(location)
             map = new google.maps.Map(document.getElementById("map"),{
                 zoom: 10,
                 center: location
             });
-            var marker = new google.maps.Marker({
+             marker = new google.maps.Marker({
                 position: location,
                 map: map
             });
@@ -93,7 +112,7 @@
 
 
 }
-
+// console.log(weather.check())
 
 document.getElementById("search-but").addEventListener("click",function() {
     weather.search()
@@ -107,27 +126,31 @@ document.getElementById("search-bar").addEventListener("keyup", function(event){
 
 
 
-function defaultCity(){
-    if (document.getElementById("search-bar").value == ""){
-        if ('geolocation' in navigator) {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                let lat = position.coords.latitude
-                let lon = position.coords.longitude 
-                let locationInfo;
-
-                fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
-                    .then(response => response.json())
-                    .then(data =>  weather.fetchWeather(data.city))
-
-            })
-        }else{
-            console.log('geolocation is disabled')
-        }
-    }
-}
 
 
-defaultCity()
+// function defaultCity(){
+//     if (document.getElementById("search-bar").value == ""){
+
+//         if ('geolocation' in navigator) {
+//             navigator.geolocation.getCurrentPosition(function (position) {
+//                 let lat = position.coords.latitude
+//                 let lon = position.coords.longitude 
+//                 let locationInfo;
+//                 fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
+//                     .then(response => response.json())
+//                     .then(data =>  weather.fetchWeather(data.city))  
+                
+//             })
+          
+//         }else{
+//             console.log('geolocation is disabled')
+//         }
+//     }
+// }
+
+
+
+weather.defaultCity()
 
 weather.initMap()
 
