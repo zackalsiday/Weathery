@@ -147,10 +147,10 @@ document.getElementById("search-bar").addEventListener("keyup", function(event){
 //         }
 //     }
 // }
-
+console.log(cityData)
 
 
 weather.defaultCity()
 
-weather.initMap()
+// weather.initMap()
 
