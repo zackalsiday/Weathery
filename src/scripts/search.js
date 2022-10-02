@@ -147,7 +147,7 @@ document.getElementById("search-bar").addEventListener("keyup", function(event){
 //         }
 //     }
 // }
-console.log(cityData)
+// console.log(cityData)
 
 
 weather.defaultCity()
