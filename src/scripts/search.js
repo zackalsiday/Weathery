@@ -3,7 +3,7 @@
  let weather = {
     
     fetchWeather: function(city) {
-        fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' + city + '?unitGroup=us&key=YL7ELQ4BTHCB72CHGUYLRTTZW&contentType=json')
+        fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' + city + '?unitGroup=us&key=PRGYVCZ9WYDCWQ5DW54PUH6HX&contentType=json')
         .then(res => res.json())
         .then(data => cityData = data)
         .then(() => this.displayWeather(cityData))   
