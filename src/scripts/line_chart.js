@@ -77,13 +77,14 @@ function today(){
                     .then(res => listWeather.unshift(res.days[0].temp))
                     // .then(() => console.log(listWeather.length))
             )
-          .then((res) => {console.log(listWeather)})
+          .then((res) => {return (listWeather)})
 
         })
    
    
 }
-today()
+let value = await today()
+console.log(value)
 
 const currentYear = new Date().getFullYear();
 const lineChart = new Chart(CHART, {
