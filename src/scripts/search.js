@@ -19,6 +19,7 @@
             let dataTwo;
                 fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${latitude}&longitude=${longitude}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
                     .then(response => response.json())
+                    // .then(data => console.log(data))
                     .then(data => dataTwo = data)
                     .then(() => document.getElementById("location").innerHTML = `${dataTwo.locality}, ${dataTwo.principalSubdivision}`)
                     
@@ -82,6 +83,7 @@
                         fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
                             .then(response => response.json())
                             .then(data => weather.fetchWeather(data.locality))
+                      
 
                     })
 
