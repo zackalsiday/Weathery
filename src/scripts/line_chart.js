@@ -4,9 +4,14 @@ function today(){
     
     let city;
     let listWeather = []
+    let year = new Date().getFullYear().toString()
+    let month = (new Date().getMonth() + 1).toString().length > 1 ? (new Date().getMonth() + 1).toString() : '0' + (new Date().getMonth() + 1).toString()
+    let day = (new Date().getDate()).toString().length > 1 ? new Date().getDate().toString() : '0' + new Date().getDate().toString()
+    // let date = year + '-' + month + '-' + day 
     navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude
         let lon = position.coords.longitude
+      
         fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
             .then(response => response.json())
             .then(data => city = data.city)
@@ -14,10 +19,56 @@ function today(){
             .then( 
                    () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/today?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
                         .then(res => res.json())
-                        .then( res => listWeather.push(res.currentConditions.temp))
+                        .then( res => listWeather.unshift(res.currentConditions.temp))
+                        .then(() => console.log(listWeather))
             )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year - 1}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                .then(res => res.json())
+                .then( res => listWeather.unshift(res.days[0].temp))
+                .then(() => console.log(listWeather))
+        
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year - 2}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                    .then(() => console.log(listWeather))
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year - 3}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                    .then(() => console.log(listWeather))
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year - 4}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                    .then(() => console.log(listWeather))
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year - 5}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                    .then(() => console.log(listWeather))
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year - 6}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                    .then(() => console.log(listWeather))
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year - 7}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                    .then(() => console.log(listWeather))
+            )
+            
     })
-    console.log(listWeather)
+    console.log(year + '-' + month + '-' + day)
+    // console.log((new Date().getMonth() + 1))
 }
 today()
 
