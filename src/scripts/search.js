@@ -1,29 +1,138 @@
+const CHART = document.getElementById("lineChart");
+const currentYear = new Date().getFullYear();
+const LINECHART = new Chart(CHART, {
+    type: 'line',
+    data: {
+        labels: [(currentYear - 9).toString(), (currentYear - 8).toString(), (currentYear - 7).toString(), (currentYear - 6).toString(), (currentYear - 5).toString(), (currentYear - 4).toString(), (currentYear - 3).toString(), (currentYear - 2).toString(), (currentYear - 1).toString(), currentYear.toString()],
+        datasets: [{
+            label: '# of Votes',
+            data: u ? [1,2,3] : [4,5,6],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    }
 
- let cityData;
+})
+ let cityData; // data of the weather 
  let weather = {
     
     fetchWeather: function(city) {
+        console.log(city)
         fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' + city + '?unitGroup=us&key=PRGYVCZ9WYDCWQ5DW54PUH6HX&contentType=json')
         .then(res => res.json())
+        // .then(res => console.log(res))
         .then(data => cityData = data)
         .then(() => this.displayWeather(cityData))   
-        .then(() => this.initMap(cityData))         
+        .then(() => this.initMap(cityData)) 
+        .then((city) => {
+            let listWeather = []
+            let year = new Date().getFullYear().toString()
+            let month = (new Date().getMonth() + 1).toString().length > 1 ? (new Date().getMonth() + 1).toString() : '0' + (new Date().getMonth() + 1).toString()
+            let day = (new Date().getDate()).toString().length > 1 ? new Date().getDate().toString() : '0' + new Date().getDate().toString()
+    // let date = year + '-' + month + '-' + day 
+               fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                //    .then(res => console.log(res))
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 1}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                
+                )
+            
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 2}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 3}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 4}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 5}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 6}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 7}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 8}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+
+            )
+            .then(
+                () => fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityData.address}/${year - 9}-${month}-${day}?key=PRGYVCZ9WYDCWQ5DW54PUH6HX`)
+                    .then(res => res.json())
+                    .then(res => listWeather.unshift(res.days[0].temp))
+                // .then(() => console.log(listWeather.length))
+            )
+            .then(res => {
+                // console.log(listWeather)
+               
+                // LINECHART.destroy()
+                LINECHART
+               
+
+            })
+        })
+               
 
     },
     displayWeather: function(data) {
-        let { address, days, latitude, longitude} = data;
+        let { address, days, latitude, longitude, currentConditions} = data;
         const {icon, temp, windspeed, humidity} = data.currentConditions;
             const weekday = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
             const d = new Date();
             let day = d.getDay()
-            let dataTwo;
-                fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${latitude}&longitude=${longitude}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
-                    .then(response => response.json())
-                    // .then(data => console.log(data))
-                    .then(data => dataTwo = data)
-                    .then(() => document.getElementById("location").innerHTML = `${dataTwo.locality}, ${dataTwo.principalSubdivision}`)
+            // let dataTwo;
+            //     fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${latitude}&longitude=${longitude}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
+            //         .then(response => response.json())
+            //         // .then(data => console.log(data))
+            //         .then(data => dataTwo = data)
+            //         .then(() => document.getElementById("location").innerHTML = `${dataTwo.locality}, ${dataTwo.principalSubdivision}`)
+        document.getElementById("location").innerHTML = `${data.resolvedAddress}`
                     
-        // console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
+        console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
         document.getElementById('day-one-far').innerHTML = ` ${days[0].temp}&degF`
         document.getElementById('day-one-cel').innerHTML = ` ${Math.round((days[0].temp - 32) * 5 / 9)}&degC `
         document.getElementById('day-one-windspeed').innerHTML = `Wind: ${days[0].windspeed}  km/h `
@@ -70,6 +179,7 @@
  }, 
         search: function () {
             this.fetchWeather(document.getElementById("search-bar").value)
+        
            
         },
         defaultCity: function(){
