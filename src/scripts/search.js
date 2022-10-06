@@ -1,13 +1,17 @@
 const CHART = document.getElementById("lineChart");
 let list = []
  let cityData; // data of the weather 
+let year = new Date().getFullYear().toString()
+let month = (new Date().getMonth() + 1).toString().length > 1 ? (new Date().getMonth() + 1).toString() : '0' + (new Date().getMonth() + 1).toString()
+let day = (new Date().getDate()).toString().length > 1 ? new Date().getDate().toString() : '0' + new Date().getDate().toString()
+    let date = year + '-' + month + '-' + day
 const currentYear = new Date().getFullYear();
 let lineChart = new Chart(CHART, {
     type: 'line',
     data: {
         labels: [(currentYear - 9).toString(), (currentYear - 8).toString(), (currentYear - 7).toString(), (currentYear - 6).toString(), (currentYear - 5).toString(), (currentYear - 4).toString(), (currentYear - 3).toString(), (currentYear - 2).toString(), (currentYear - 1).toString(), currentYear.toString()],
         datasets: [{
-            label: '# of Votes',
+            label: day + ',' + month + ' weather',
             data: list,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
