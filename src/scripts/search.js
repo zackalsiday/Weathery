@@ -1,19 +1,21 @@
 const CHART = document.getElementById("lineChart");
+let list = []
+ let cityData; // data of the weather 
 const currentYear = new Date().getFullYear();
-const LINECHART = new Chart(CHART, {
+let lineChart = new Chart(CHART, {
     type: 'line',
     data: {
         labels: [(currentYear - 9).toString(), (currentYear - 8).toString(), (currentYear - 7).toString(), (currentYear - 6).toString(), (currentYear - 5).toString(), (currentYear - 4).toString(), (currentYear - 3).toString(), (currentYear - 2).toString(), (currentYear - 1).toString(), currentYear.toString()],
         datasets: [{
             label: '# of Votes',
-            data: u ? [1,2,3] : [4,5,6],
+            data: list,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 159, 64, 0.2)',
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -26,9 +28,9 @@ const LINECHART = new Chart(CHART, {
             borderWidth: 1
         }]
     }
+    
 
 })
- let cityData; // data of the weather 
  let weather = {
     
     fetchWeather: function(city) {
@@ -108,11 +110,10 @@ const LINECHART = new Chart(CHART, {
             )
             .then(res => {
                 // console.log(listWeather)
-               
-                // LINECHART.destroy()
-                LINECHART
-               
-
+                lineChart.data.datasets[0].data = listWeather;
+                lineChart.update()
+                
+                 
             })
         })
                
