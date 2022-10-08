@@ -1,9 +1,12 @@
 #lineChart{
-background-color: rgb(196, 193, 193);
+    background-color: rgba(0, 0, 0, 0.603);
     margin-left: 30rem;
     border-radius: 10px;
     padding-right: 2rem;
     padding-left: 2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    position: relative;
+    bottom: 33rem;
+    /* width: 100%; */
 }

@@ -11,26 +11,50 @@ let lineChart = new Chart(CHART, {
     data: {
         labels: [(currentYear - 9).toString(), (currentYear - 8).toString(), (currentYear - 7).toString(), (currentYear - 6).toString(), (currentYear - 5).toString(), (currentYear - 4).toString(), (currentYear - 3).toString(), (currentYear - 2).toString(), (currentYear - 1).toString(), currentYear.toString()],
         datasets: [{
-            label: day + ',' + month + ' weather',
+            label: day + '-' + month + ' weather',
             data: list,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
+                // 'rgba(255, 99, 132, 0.2)',
+                // 'rgba(54, 162, 235, 0.2)',
+                // 'rgba(255, 206, 86, 0.2)',
+                // 'rgba(75, 192, 192, 0.2)',
+                // 'rgba(153, 102, 255, 0.2)',
+                // 'rgba(255, 159, 64, 0.2)',
+                // 'red'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                // 'rgba(255, 99, 132, 1)',
+                // 'rgba(54, 162, 235, 1)',
+                // 'rgba(255, 206, 86, 1)',
+                // 'rgba(75, 192, 192, 1)',
+                // 'rgba(153, 102, 255, 1)',
+                // 'rgba(255, 159, 64, 1)'
+                'red'
+        
             ],
-            borderWidth: 1
+            borderWidth: 3,
+            lineTension: 0.3
         }]
+    },
+    options: {
+        scales: {
+            y: {
+                ticks: {
+                    color: 'white',
+                    font: {
+                        size: 17
+                    }
+                }
+            },
+            x: {
+                ticks: {
+                    color: 'white',
+                    font: {
+                        size: 17
+                    }
+                }
+            }
+        }
     }
     
 
