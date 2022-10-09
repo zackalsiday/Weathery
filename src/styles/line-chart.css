@@ -8,10 +8,16 @@
     position: relative;
     left: 30rem;   
     bottom: 40rem;
-    display: inline-block;
-    position: relative;
-    width: 100%; */
-    width: 80vw;
+    display: inline-block; */
+    position: relative; 
+    border-radius: 10px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    left: 550px;
+    bottom: 35rem;
+    width: 55vw;
 
 }
 
