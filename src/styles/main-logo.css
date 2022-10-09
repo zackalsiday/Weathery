@@ -24,7 +24,7 @@
 
 body{
  background-repeat: no-repeat; 
-    position: fixed;
+    position: relative;
     background-attachment: fixed;
      background-size: cover; 
      padding-left:2rem

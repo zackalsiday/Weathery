@@ -20,6 +20,85 @@
 
 <body>
   <div class="main"><img class="main-logo" src="./weathery-2.png" /></div>
+  <div class="search">
+    <input type="text" id="search-bar" placeholder="Search">
+    <button id="search-but"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+        height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+          clip-rule="evenodd">
+        </path>
+        <path fill-rule="evenodd"
+          d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd">
+        </path>
+      </svg></button>
+  </div>
+  <div class="weeks-weather">
+    <div class="days">
+      <img src="" id="day-one-icon" class="icons" />
+      <div id="day-one-day">Sun</div>
+      <div id="day-one-far">20&degF</div>
+      <div id="day-one-cel">10&degC</div>
+      <div id="day-one-windspeed">6 km/h</div>
+      <div id="day-one-humidity">10</div>
+  
+    </div>
+    <div class="space">hii</div>
+    <div class="days">
+      <img src="" id="day-two-icon" class="icons" />
+      <div id="day-two-day">Mon</div>
+      <div id="day-two-far">20&degF</div>
+      <div id="day-two-cel">10&degC</div>
+      <div id="day-two-windspeed">6 km/h</div>
+      <div id="day-two-humidity">6 km/h</div>
+    </div>
+    <div class="space">hii</div>
+    <div class="days">
+      <img src="" id="day-three-icon" class="icons" />
+      <div id="day-three-day">Tue</div>
+      <div id="day-three-far">20&degF</div>
+      <div id="day-three-cel">10&degC</div>
+      <div id="day-three-windspeed">6 km/h</div>
+      <div id="day-three-humidity">6 km/h</div>
+    </div>
+    <div class="space">hii</div>
+    <div class="days">
+      <img src="" id="day-four-icon" class="icons" />
+      <div id="day-four-day">Wed</div>
+      <div id="day-four-far">20&degF</div>
+      <div id="day-four-cel">10&degC</div>
+      <div id="day-four-windspeed">6 km/h</div>
+      <div id="day-four-humidity">6 km/h</div>
+    </div>
+    <div class="space">hii</div>
+    <div class="days">
+      <img src="" id="day-five-icon" class="icons" />
+      <div id="day-five-day">Thur</div>
+      <div id="day-five-far">20&degF</div>
+      <div id="day-five-cel">10&degC</div>
+      <div id="day-five-windspeed">6 km/h</div>
+      <div id="day-five-humidity">6 km/h</div>
+    </div>
+    <div class="space">hii</div>
+    <div class="days">
+      <img src="" id="day-six-icon" class="icons" />
+      <div id="day-six-day">Fri</div>
+      <div id="day-six-far">20&degF</div>
+      <div id="day-six-cel">10&degC</div>
+      <div id="day-six-windspeed">6 km/h</div>
+      <div id="day-six-humidity">6 km/h</div>
+    </div>
+    <div class="space">hii</div>
+    <div class="days">
+      <img src="" id="day-seven-icon" class="icons" />
+      <div id="day-seven-day">Sat</div>
+      <div id="day-seven-far">20&degF</div>
+      <div id="day-seven-cel">10&degC</div>
+      <div id="day-seven-windspeed">6 km/h</div>
+      <div id="day-seven-humidity">6 km/h</div>
+    </div>
+  </div>
+  <div id="map"></div>
   <!-- <div id="location-off-disclaimer">Please Allow Location through you're settings in order to recieve automatic tracking to your cities weather info</div> -->
   <span class="creators-info">
       <a   href="https://github.com/zackalsiday" target="_blank"> 
@@ -44,89 +123,18 @@
           </path>
         </svg>
       </a>
+      <div id="location">Las Vegas, Nevada</div>
   </span> 
-  <div id="location">Las Vegas, Nevada</div>
-  <div class="search">
-    <input type="text" id="search-bar" placeholder="Search">
-    <button id="search-but"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1.2em" width="1.2em"
-      xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd"
-        d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd">
-      </path>
-      <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-        clip-rule="evenodd"></path>
-    </svg></button>
-  </div>
-  <div class="weeks-weather">
-    <div class="days">
-      <img src="" id="day-one-icon" class="icons"/>
-      <div id="day-one-day">Sun</div>
-      <div id="day-one-far">20&degF</div>
-      <div id="day-one-cel">10&degC</div>
-      <div id="day-one-windspeed">6 km/h</div>
-      <div id="day-one-humidity">10</div>
-      
-    </div>
-  <div class="space">hii</div>
-    <div class="days">
-      <img src="" id="day-two-icon" class="icons" />
-      <div id="day-two-day">Mon</div>
-      <div id="day-two-far">20&degF</div>
-      <div id="day-two-cel">10&degC</div>
-      <div id="day-two-windspeed">6 km/h</div>
-      <div id="day-two-humidity">6 km/h</div>
-    </div>
-  <div class="space">hii</div>
-    <div class="days">
-      <img src="" id="day-three-icon" class="icons" />
-      <div id="day-three-day">Tue</div>
-      <div id="day-three-far">20&degF</div>
-      <div id="day-three-cel">10&degC</div>
-      <div id="day-three-windspeed">6 km/h</div>
-      <div id="day-three-humidity">6 km/h</div>
-    </div>
-  <div class="space">hii</div>
-    <div class="days">
-          <img src="" id="day-four-icon" class="icons" />
-          <div id="day-four-day">Wed</div>
-          <div id="day-four-far">20&degF</div>
-          <div id="day-four-cel">10&degC</div>
-          <div id="day-four-windspeed">6 km/h</div>
-          <div id="day-four-humidity">6 km/h</div>
-    </div>
-<div class="space">hii</div>
-    <div class="days">
-          <img src="" id="day-five-icon" class="icons" />
-          <div id="day-five-day">Thur</div>
-          <div id="day-five-far">20&degF</div>
-          <div id="day-five-cel">10&degC</div>
-          <div id="day-five-windspeed">6 km/h</div>
-          <div id="day-five-humidity">6 km/h</div>
-    </div>
-<div class="space">hii</div>
-    <div class="days">
-            <img src="" id="day-six-icon" class="icons" />
-            <div id="day-six-day">Fri</div>
-            <div id="day-six-far">20&degF</div>
-            <div id="day-six-cel">10&degC</div>
-            <div id="day-six-windspeed">6 km/h</div>
-            <div id="day-six-humidity">6 km/h</div>
-    </div>
-    <div class="space">hii</div>
-    <div class="days">
-      <img src="" id="day-seven-icon" class="icons" />
-      <div id="day-seven-day">Sat</div>
-      <div id="day-seven-far">20&degF</div>
-      <div id="day-seven-cel">10&degC</div>
-      <div id="day-seven-windspeed">6 km/h</div>
-      <div id="day-seven-humidity">6 km/h</div>
-    </div>
-  </div>
-<div id="map"></div>
-<div>
-  <canvas id="lineChart" height="500" width="510"></canvas>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+  
+<div id="chart-wrapper">
+  <canvas id="lineChart" height="20"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
 </div>
+
+
+
+
 
 
 </body>

@@ -1,6 +1,6 @@
 .search{
+    position: relative;
     display: flex;
-    position: fixed;
     left: 9rem;
     top: 13rem;
     gap: 0.5rem;
@@ -8,6 +8,7 @@
 }
 
 #search-but{
+    
     border-radius: 50%;
     height: 2.5em;
     width: 2.5em;

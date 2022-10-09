@@ -1,4 +1,5 @@
 const CHART = document.getElementById("lineChart");
+// CHART.width = 100
 let list = []
  let cityData; // data of the weather 
 let year = new Date().getFullYear().toString()
@@ -55,6 +56,7 @@ let lineChart = new Chart(CHART, {
                 }
             }
         }
+       
     }
     
 
