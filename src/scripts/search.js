@@ -3,7 +3,9 @@ const CHART = document.getElementById("lineChart");
 let list = []
  let cityData; // data of the weather 
 let year = new Date().getFullYear().toString()
-let month = (new Date().getMonth() + 1).toString().length > 1 ? (new Date().getMonth() + 1).toString() : '0' + (new Date().getMonth() + 1).toString()
+let monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+// let month = (new Date().getMonth() + 1).toString().length > 1 ? (new Date().getMonth() + 1).toString() : '0' + (new Date().getMonth() + 1).toString()
+let month = monthName[(new Date().getMonth())]
 let day = (new Date().getDate()).toString().length > 1 ? new Date().getDate().toString() : '0' + new Date().getDate().toString()
     let date = year + '-' + month + '-' + day
 const currentYear = new Date().getFullYear();
@@ -12,7 +14,7 @@ let lineChart = new Chart(CHART, {
     data: {
         labels: [(currentYear - 9).toString(), (currentYear - 8).toString(), (currentYear - 7).toString(), (currentYear - 6).toString(), (currentYear - 5).toString(), (currentYear - 4).toString(), (currentYear - 3).toString(), (currentYear - 2).toString(), (currentYear - 1).toString(), currentYear.toString()],
         datasets: [{
-            label: day + '-' + month + ' weather',
+            label: day + ' - ' + month + ' weather',
             data: list,
             backgroundColor: [
                 // 'rgba(255, 99, 132, 0.2)',
@@ -55,6 +57,17 @@ let lineChart = new Chart(CHART, {
                     }
                 }
             }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: `${month} ${day} Fahrenheit over the past 10 years.`,
+                font: {
+                    size: 30,
+                    style: 'italic'
+                },
+                color: 'white'
+            }
         }
        
     }
@@ -73,7 +86,10 @@ let lineChart = new Chart(CHART, {
         .then(() => this.initMap(cityData)) 
         .then((city) => {
             let listWeather = []
+            let place = city
             let year = new Date().getFullYear().toString()
+            let monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            let monthName = monthNames[(new Date().getMonth())]
             let month = (new Date().getMonth() + 1).toString().length > 1 ? (new Date().getMonth() + 1).toString() : '0' + (new Date().getMonth() + 1).toString()
             let day = (new Date().getDate()).toString().length > 1 ? new Date().getDate().toString() : '0' + new Date().getDate().toString()
     // let date = year + '-' + month + '-' + day 
@@ -141,6 +157,7 @@ let lineChart = new Chart(CHART, {
             .then(res => {
                 // console.log(listWeather)
                 lineChart.data.datasets[0].data = listWeather;
+                lineChart.options.plugins.title.text = `${monthName} ${day} Fahrenheit over the past 10 years in ${cityData.address}.`,
                 lineChart.update()
                 
                  
