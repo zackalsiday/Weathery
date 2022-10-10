@@ -77,10 +77,8 @@ let lineChart = new Chart(CHART, {
  let weather = {
     
     fetchWeather: function(city) {
-        console.log(city)
         fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' + city + '?unitGroup=us&key=PRGYVCZ9WYDCWQ5DW54PUH6HX&contentType=json')
         .then(res => res.json())
-        // .then(res => console.log(res))
         .then(data => cityData = data)
         .then(() => this.displayWeather(cityData))   
         .then(() => this.initMap(cityData)) 
@@ -179,8 +177,6 @@ let lineChart = new Chart(CHART, {
             //         .then(data => dataTwo = data)
             //         .then(() => document.getElementById("location").innerHTML = `${dataTwo.locality}, ${dataTwo.principalSubdivision}`)
         document.getElementById("location").innerHTML = `${data.resolvedAddress}`
-                    
-        console.log(address, days, icon, temp, humidity, windspeed, latitude, longitude)
         document.getElementById('day-one-far').innerHTML = ` ${days[0].temp}&degF`
         document.getElementById('day-one-cel').innerHTML = ` ${Math.round((days[0].temp - 32) * 5 / 9)}&degC `
         document.getElementById('day-one-windspeed').innerHTML = `Wind: ${days[0].windspeed}  km/h `
