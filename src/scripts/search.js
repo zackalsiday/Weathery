@@ -226,21 +226,19 @@ let lineChart = new Chart(CHART, {
         
            
         },
-        defaultCity: function(){
+        UserCity: function(){
             if (document.getElementById("search-bar").value == "") {
                 if ('geolocation' in navigator) {
-                    
-                  navigator.geolocation.getCurrentPosition( (position) => {
+                    navigator.geolocation.getCurrentPosition( (position) => {
                         let lat = position.coords.latitude
                         let lon = position.coords.longitude
                         // let locationInfo;
                         fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
                             .then(response => response.json())
-                            .then(data => weather.fetchWeather(data.locality))
-                      
-
+                            .then(data => console.log(data.locality))
+                            // .then(data => weather.fetchWeather(data.locality))
                     })
-
+                  
                 } else {
                     console.log('geolocation is disabled')
                 }
@@ -284,29 +282,8 @@ document.getElementById("search-bar").addEventListener("keyup", function(event){
 
 
 
-// function defaultCity(){
-//     if (document.getElementById("search-bar").value == ""){
 
-//         if ('geolocation' in navigator) {
-//             navigator.geolocation.getCurrentPosition(function (position) {
-//                 let lat = position.coords.latitude
-//                 let lon = position.coords.longitude 
-//                 let locationInfo;
-//                 fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
-//                     .then(response => response.json())
-//                     .then(data =>  weather.fetchWeather(data.city))  
-                
-//             })
-          
-//         }else{
-//             console.log('geolocation is disabled')
-//         }
-//     }
-// }
-// console.log(cityData)
-
-
-weather.defaultCity()
+weather.UserCity()
 
 // weather.initMap()
 
