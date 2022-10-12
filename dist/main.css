@@ -8,9 +8,10 @@
 } */
 .main-logo{
 
-    height: 15rem;
+    height: 17rem;
     
     position: relative;
+    bottom: 1rem;
     right: 6.5rem;
     width: 37rem;
    
@@ -33,7 +34,7 @@ body{
 .weeks-weather{
     display: flex;
     position: relative;
-    top: 0.001rem;
+    bottom: 1.5rem;
     border-style: solid;
     padding: 1rem;
     width: 26rem;
@@ -92,7 +93,7 @@ body{
 .search{
     position: fixed;
     display: flex;
-    left: 9rem;
+    left: 2.5rem;
     top: 13rem;
     gap: 0.5rem;
     width: fit-content;
@@ -127,13 +128,14 @@ body{
     background-color: rgba(255, 255, 255, 0.664);
     font-size: 1rem;
     padding-left: 1rem;
+    width: 24.3rem;
 
 }
 #map{
     width: 28.4rem;
     height: 18.8rem;
     position: relative;
-    top: 1.3rem;
+    bottom: 1rem;
     border-radius: 1rem;
 }
 .creators-icon{

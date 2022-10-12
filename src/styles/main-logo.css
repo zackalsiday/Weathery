@@ -8,9 +8,10 @@
 } */
 .main-logo{
 
-    height: 15rem;
+    height: 17rem;
     
     position: relative;
+    bottom: 1rem;
     right: 6.5rem;
     width: 37rem;
    
