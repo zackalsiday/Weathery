@@ -1,7 +1,8 @@
 .weeks-weather{
     display: flex;
     position: relative;
-    bottom: 3rem;
+    /* bottom: 3rem; */
+    top: 4.5rem;
     border-style: solid;
     padding: 1rem;
     width: 26rem;

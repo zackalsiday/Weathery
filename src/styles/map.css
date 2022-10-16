@@ -2,6 +2,7 @@
     width: 28.4rem;
     height: 18.8rem;
     position: relative;
-    bottom: 1.7rem;
+    /* bottom: 1.7rem; */
+    top: 5rem;
     border-radius: 1rem;
 }
