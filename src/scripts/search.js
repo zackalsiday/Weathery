@@ -227,22 +227,59 @@ let lineChart = new Chart(CHART, {
            
         },
         UserCity: function(){
-            if (document.getElementById("search-bar").value == "") {
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition( (position) => {
-                        let lat = position.coords.latitude
-                        let lon = position.coords.longitude
-                        // let locationInfo;
-                        fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
-                            .then(response => response.json())
-                            // .then(data => console.log(data.locality))
-                            .then(data => weather.fetchWeather(data.locality))
-                    })
-                  
+            let first = ''
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
                 } else {
-                    console.log('geolocation is disabled')
+                    first = "Geolocation is not supported by this browser.";
                 }
             }
+
+            function showPosition(position) {
+                         let lat = position.coords.latitude
+                        let lon = position.coords.longitude
+            //             // let locationInfo;
+                        fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
+                            .then(response => response.json())
+            //                 // .then(data => console.log(data.locality))
+                            .then(data => weather.fetchWeather(data.locality))
+            //         })
+            }
+
+            function showError(error) {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        weather.fetchWeather('Sanaa')
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        weather.fetchWeather('Sanaa')
+                        break;
+                    case error.TIMEOUT:
+                        weather.fetchWeather('Sanaa')
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        weather.fetchWeather('Sanaa')
+                        break;
+                }
+            }
+            // if (document.getElementById("search-bar").value == "") {
+            //     if ('geolocation' in navigator) {
+            //         navigator.geolocation.getCurrentPosition( (position) => {
+            //             let lat = position.coords.latitude
+            //             let lon = position.coords.longitude
+            //             // let locationInfo;
+            //             fetch(`https://api.bigdatacloud.net/data/reverse-geocode-with-timezone?latitude=${lat}&longitude=${lon}&localityLanguage=en&key=2e1af372c3224765a2abf47ef4f84cad`)
+            //                 .then(response => response.json())
+            //                 // .then(data => console.log(data.locality))
+            //                 .then(data => weather.fetchWeather(data.locality))
+            //         })
+                  
+            //     } else {
+            //         console.log('geolocation is disabled')
+            //     }
+            // }
+            getLocation()
         },
 
       initMap: function(data){
