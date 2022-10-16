@@ -250,16 +250,16 @@ let lineChart = new Chart(CHART, {
             function showError(error) {
                 switch (error.code) {
                     case error.PERMISSION_DENIED:
-                        weather.fetchWeather('Sanaa')
+                        weather.fetchWeather('Yemen')
                         break;
                     case error.POSITION_UNAVAILABLE:
-                        weather.fetchWeather('Sanaa')
+                        weather.fetchWeather('Yemen')
                         break;
                     case error.TIMEOUT:
-                        weather.fetchWeather('Sanaa')
+                        weather.fetchWeather('Yemen')
                         break;
                     case error.UNKNOWN_ERROR:
-                        weather.fetchWeather('Sanaa')
+                        weather.fetchWeather('Yemen')
                         break;
                 }
             }
